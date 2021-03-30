@@ -1,27 +1,17 @@
 module.exports = {
-    "env": {
-        "es6": true,
-        "node": true
-    },
-    "extends": [
-        "airbnb-base", "prettier"
-    ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": "error",
-      "class-methods-use-this": "off",
-      "no-param-reassign": "off",
-      "camelcase": "off",
-      "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
-    }
+  env: {
+    es2020: true,
+    node: true,
+  },
+  extends: ['airbnb-base', 'plugin:jest/all'],
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: ['jest'],
+  rules: {
+    'class-methods-use-this': 'off',
+    'jest/lowercase-name': 'off',
+    'no-param-reassign': 'off',
+  },
 };
